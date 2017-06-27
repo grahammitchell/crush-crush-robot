@@ -1,0 +1,562 @@
+{
+  "BONNIBEL": {
+    "0": [
+      "nothing"
+    ],
+    "1": [
+      "nothing"
+    ],
+    "2": [
+      "buy shell 10",
+      "job art"
+    ],
+    "3": [
+      "buy donut 10"
+    ],
+    "4": [
+      "buy chocolates 10",
+      "date stroll 7"
+    ],
+    "5": [
+      "buy book 5",
+      "date beach 7"
+    ],
+    "6": [
+      "buy cake 3",
+      "date sightseeing 7"
+    ],
+    "7": [
+      "buy teaset 2",
+      "date movies 7"
+    ],
+    "8": [
+      "nothing"
+    ]
+  },
+  "FUMI": {
+    "0": [
+      "nothing"
+    ],
+    "1": [
+      "nothing"
+    ],
+    "2": [
+      "buy drink 25"
+    ],
+    "3": [
+      "buy plushytoy 25"
+    ],
+    "4": [
+      "buy shoes 10",
+      "date stroll 10"
+    ],
+    "5": [
+      "buy necklace 10",
+      "date beach 10"
+    ],
+    "6": [
+      "buy designerbag 5",
+      "date sightseeing 10"
+    ],
+    "7": [
+      "buy car 2",
+      "date movies 10"
+    ],
+    "8": [
+      "nothing"
+    ]
+  },
+  "BEARVERLY": {
+    "0": [
+      "nothing"
+    ],
+    "1": [
+      "nothing"
+    ],
+    "2": [
+      "buy chocolates 50"
+    ],
+    "3": [
+      "buy cake 50"
+    ],
+    "4": [
+      "buy teaset 25",
+      "date stroll 12"
+    ],
+    "5": [
+      "buy puppy 25",
+      "date beach 12"
+    ],
+    "6": [
+      "buy necklace 10",
+      "date sightseeing 12"
+    ],
+    "7": [
+      "buy designerbag 10",
+      "date movies 12",
+      "sorry 15"
+    ],
+    "8": [
+      "buy potion",
+      "sorry 50"
+    ]
+  },
+  "AYANO": {
+    "0": [
+      "job slaying"
+    ],
+    "1": [
+      "nothing"
+    ],
+    "2": [
+      "nothing"
+    ],
+    "3": [
+      "buy flowers 5"
+    ],
+    "4": [
+      "buy plushytoy 1000",
+      "date stroll 20"
+    ],
+    "5": [
+      "date beach 20"
+    ],
+    "6": [
+      "buy designerbag 50",
+      "date sightseeing 20"
+    ],
+    "7": [
+      "buy car 50",
+      "date movies 20"
+    ],
+    "8": [
+      "nothing"
+    ]
+  },
+  "QUILL": {
+    "0": [
+      "nothing"
+    ],
+    "1": [
+      "nothing"
+    ],
+    "2": [
+      "buy shell"
+    ],
+    "3": [
+      "buy fruitbasket"
+    ],
+    "4": [
+      "buy earrings",
+      "date stroll 3"
+    ],
+    "5": [
+      "buy flowers",
+      "date beach 3"
+    ],
+    "6": [
+      "buy plushytoy",
+      "date sightseeing 3"
+    ],
+    "7": [
+      "buy teaset",
+      "date movies 3"
+    ],
+    "8": [
+      "buy necklace"
+    ]
+  },
+  "MIO": {
+    "0": [
+      "nothing"
+    ],
+    "1": [
+      "nothing"
+    ],
+    "2": [
+      "buy rose"
+    ],
+    "3": [
+      "buy lotion"
+    ],
+    "4": [
+      "buy donut",
+      "date stroll 2"
+    ],
+    "5": [
+      "buy book",
+      "date beach 2"
+    ],
+    "6": [
+      "buy drink",
+      "date sightseeing"
+    ],
+    "7": [
+      "buy flowers",
+      "date movies",
+      "job sports",
+      "job computers"
+    ],
+    "8": [
+      "buy cake"
+    ]
+  },
+  "MISC": {
+    "0": [
+      "unjob fastfood",
+      "unjob restaurant",
+      "unjob lifeguard",
+      "unjob cleaning",
+      "unjob hunting",
+      "job space",
+      "selectgirl NUTAKU",
+      "selectgirl IRO",
+      "selectgirl BONNIBEL",
+      "selectgirl AYANO",
+      "selectgirl FUMI",
+      "selectgirl BEARVERLY",
+      "selectgirl NINA"
+    ],
+    "1": [
+      "unjob computers",
+      "unjob zoo",
+      "unjob sports",
+      "job art 3",
+      "job movies 2",
+      "selectgirl ALPHA",
+      "selectgirl PAMU",
+      "selectgirl LUNA"
+    ],
+    "2": [
+      "unjob wizard"
+    ]
+  },
+  "IRO": {
+    "0": [
+      "nothing"
+    ],
+    "1": [
+      "nothing"
+    ],
+    "2": [
+      "buy lotion 5"
+    ],
+    "3": [
+      "buy fruitbasket 5"
+    ],
+    "4": [
+      "buy drink 3",
+      "date stroll 6"
+    ],
+    "5": [
+      "buy shoes 2",
+      "date beach 6"
+    ],
+    "6": [
+      "buy puppy",
+      "date sightseeing 6"
+    ],
+    "7": [
+      "buy necklace",
+      "date movies 6"
+    ],
+    "8": [
+      "buy car"
+    ]
+  },
+  "ELLE": {
+    "0": [
+      "job cleaning"
+    ],
+    "1": [
+      "nothing"
+    ],
+    "2": [
+      "buy rose 5"
+    ],
+    "3": [
+      "buy chocolates 3"
+    ],
+    "4": [
+      "buy drink 2",
+      "date stroll 4",
+      "dialogskip",
+      "hobby smart",
+      "hobby lucky",
+      "hobby mysterious",
+      "hobby angst"
+    ],
+    "5": [
+      "buy flowers 2",
+      "date beach 4",
+      "job casino"
+    ],
+    "6": [
+      "buy cake",
+      "date sightseeing 4"
+    ],
+    "7": [
+      "buy plushytoy",
+      "date movies 4"
+    ],
+    "8": [
+      "buy puppy"
+    ]
+  },
+  "NINA": {
+    "0": [
+      "nothing"
+    ],
+    "1": [
+      "nothing"
+    ],
+    "2": [
+      "buy car"
+    ],
+    "3": [
+      "buy car 2"
+    ],
+    "4": [
+      "buy car 3",
+      "date stroll 15"
+    ],
+    "5": [
+      "buy car 4",
+      "date beach 15"
+    ],
+    "6": [
+      "buy car 5",
+      "date sightseeing 15"
+    ],
+    "7": [
+      "buy car 6",
+      "date movies 15",
+      "sorry 50"
+    ],
+    "8": [
+      "buy car 7",
+      "sorry 80"
+    ]
+  },
+  "EVA": {
+    "0": [
+      "sleep 1"
+    ],
+    "1": [
+      "nothing"
+    ],
+    "2": [
+      "sorry 5"
+    ],
+    "3": [
+      "sorry 50"
+    ],
+    "4": [
+      "date stroll 25",
+      "sorry 20"
+    ],
+    "5": [
+      "date beach 50"
+    ],
+    "6": [
+      "date sightseeing 75"
+    ],
+    "7": [
+      "date movies 100"
+    ],
+    "8": [
+      "sorry 50"
+    ]
+  },
+  "PAMU": {
+    "0": [
+      "nothing"
+    ],
+    "1": [
+      "job wizard"
+    ],
+    "2": [
+      "buy lotion 5000"
+    ],
+    "3": [
+      "buy drink 5000"
+    ],
+    "4": [
+      "buy lotion 10000",
+      "date stroll 50"
+    ],
+    "5": [
+      "buy car 100",
+      "date beach 50"
+    ],
+    "6": [
+      "buy lotion 10000",
+      "buy lotion 10000",
+      "buy lotion 10000",
+      "buy lotion 10000",
+      "buy lotion 10000",
+      "date sightseeing 50",
+      "sorry 15"
+    ],
+    "7": [
+      "buy drink 10000",
+      "buy drink 10000",
+      "buy drink 10000",
+      "buy drink 10000",
+      "buy drink 10000",
+      "date movies 50",
+      "sorry 50"
+    ],
+    "8": [
+      "nothing"
+    ]
+  },
+  "LUNA": {
+    "0": [
+      "nothing"
+    ],
+    "1": [
+      "nothing"
+    ],
+    "2": [
+      "buy shoes 10000"
+    ],
+    "3": [
+      "buy necklace 10000"
+    ],
+    "4": [
+      "buy car 10000",
+      "date stroll 100"
+    ],
+    "5": [
+      "buy magiccandles 10",
+      "date beach 100"
+    ],
+    "6": [
+      "date sightseeing 100",
+      "buy enchantedscarf 5"
+    ],
+    "7": [
+      "date movies 100",
+      "buy bewitchedjam 3"
+    ],
+    "8": [
+      "nothing"
+    ]
+  },
+  "CASSIE": {
+    "0": [
+      "job fastfood",
+      "sleep 1",
+      "sorry 5"
+    ],
+    "1": [
+      "hobby suave",
+      "sorry 13"
+    ],
+    "2": [
+      "hobby funny",
+      "hobby buff",
+      "hobby techsavvy",
+      "buy shell"
+    ],
+    "3": [
+      "job restaurant",
+      "buy rose"
+    ],
+    "4": [
+      "hobby tenderness",
+      "hobby motivation",
+      "buy lotion",
+      "date stroll",
+      "job lifeguard"
+    ],
+    "5": [
+      "buy donut",
+      "date stroll 3"
+    ],
+    "6": [
+      "hobby wisdom",
+      "hobby badass",
+      "buy fruitbasket",
+      "date beach"
+    ],
+    "7": [
+      "job zoo",
+      "job hunting",
+      "buy chocolates",
+      "date beach 3"
+    ],
+    "8": [
+      "buy book"
+    ]
+  },
+  "NUTAKU": {
+    "0": [
+      "nothing"
+    ],
+    "1": [
+      "nothing"
+    ],
+    "2": [
+      "buy lotion 3"
+    ],
+    "3": [
+      "buy book"
+    ],
+    "4": [
+      "buy drink 2",
+      "date stroll 5"
+    ],
+    "5": [
+      "buy plushytoy",
+      "date beach 5"
+    ],
+    "6": [
+      "buy shoes",
+      "date sightseeing 5"
+    ],
+    "7": [
+      "buy necklace",
+      "date movies 5"
+    ],
+    "8": [
+      "buy designerbag"
+    ]
+  },
+  "ALPHA": {
+    "0": [
+      "nothing"
+    ],
+    "1": [
+      "job legal 2"
+    ],
+    "2": [
+      "buy shell 5000"
+    ],
+    "3": [
+      "buy rose 5000"
+    ],
+    "4": [
+      "buy book 5000",
+      "date stroll 20"
+    ],
+    "5": [
+      "buy flowers 5000",
+      "date beach 20"
+    ],
+    "6": [
+      "buy shoes 500",
+      "date sightseeing 20"
+    ],
+    "7": [
+      "job love",
+      "buy designerbag 500",
+      "date movies 20",
+      "unjob love"
+    ],
+    "8": [
+      "buy usb"
+    ]
+  }
+}

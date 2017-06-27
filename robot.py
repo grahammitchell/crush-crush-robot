@@ -356,267 +356,22 @@ def reset():
 	time.sleep(6.5)
 	print("done.")
 
-dates = {
-	'MISC': {
-		0: (
-			'unjob fastfood',
-			'unjob restaurant',
-			'unjob lifeguard',
-			'unjob cleaning',
-			'unjob hunting',
-			'job space',
-			"selectgirl ELLE",
-			"selectgirl NUTAKU",
-			"selectgirl IRO",
-			"selectgirl BONNIBEL",
-			"selectgirl AYANO",
-			"selectgirl FUMI",
-			"selectgirl BEARVERLY",
-			"selectgirl NINA",
-		),
-		1: (
-			'unjob computers',
-			'unjob zoo',
-			'unjob sports',
-			'job art 3',
-			'job movies 2',
-			"selectgirl ALPHA",
-			"selectgirl PAMU",
-			"selectgirl LUNA",
-		),
-		2: (
-			'unjob wizard',
-			"selectgirl EVA",
-		),
-	},
-	'CASSIE': {
-		0: (
-			'job fastfood',
-			'sleep 1',
-			'sorry 5',
-		),
-		1: (
-			'hobby suave',
-			'sorry 13',
-		),
-		2: (
-			'hobby funny',
-			'hobby buff',
-			'hobby techsavvy',
-			'buy shell',
-		),
-		3: (
-			'job restaurant',
-			'buy rose',
-		),
-		4: (
-			'hobby tenderness',
-			'hobby motivation',
-			'buy lotion',
-			'date stroll',
-			'job lifeguard',
-		),
-		5: (
-			'buy donut',
-			'date stroll 3',
-		),
-		6: (
-			'hobby wisdom',
-			'hobby badass',
-			'buy fruitbasket',
-			'date beach',
-		),
-		7: (
-			'job cleaning',
-			'job zoo',
-			'job hunting',
-			'buy chocolates',
-			'date beach 3',
-		),
-		8: ( 'buy book', ),
-	},
-	"MIO": {
-		0: ( 'nothing', ),
-		1: ( 'nothing', ),
-		2: ( 'buy rose', ),
-		3: ( 'buy lotion', ),
-		4: ( 'buy donut', 'date stroll 2', ),
-		5: ( 'buy book', 'date beach 2', ),
-		6: ( 'hobby smart', 'buy drink', 'date sightseeing', ),
-		7: (
-			'buy flowers',
-			'date movies',
-			'job sports',
-			'job computers',
-		),
-		8: ( 'buy cake', ),
-	},
-	"QUILL": {
-		0: ( 'nothing', ),
-		1: ( 'nothing', ),
-		2: ( 'buy shell', ),
-		3: ( 'buy fruitbasket', ),
-		4: ( 'buy earrings', 'date stroll 3', ),
-		5: ( 'buy flowers', 'date beach 3', ),
-		6: ( 'buy plushytoy', 'date sightseeing 3', ),
-		7: ( 'buy teaset', 'date movies 3', ),
-		8: ( 'buy necklace', ),
-	},
-	"ELLE": {
-		0: ( 'nothing', ),
-		1: ( 'nothing', ),
-		2: ( 'buy rose 5', ),
-		3: ( 'buy chocolates 3', ),
-		4: ( 'buy drink 2', 'date stroll 4', ),
-		5: (
-				'hobby lucky',
-				'hobby mysterious',
-				'hobby angst',
-				'buy flowers 2',
-				'date beach 4',
-				'sleep 5',
-				'job casino',
-			),
-		6: ( 'buy cake', 'date sightseeing 4', ),
-		7: ( 'buy plushytoy', 'date movies 4', ),
-		8: ( 'buy puppy', ),
-	},
-	"NUTAKU": {
-		0: ( 'nothing', ),
-		1: ( 'nothing', ),
-		2: ( 'buy lotion 3', ),
-		3: ( 'buy book', ),
-		4: ( 'buy drink 2', 'date stroll 5', ),
-		5: ( 'buy plushytoy', 'date beach 5', ),
-		6: ( 'buy shoes', 'date sightseeing 5', ),
-		7: ( 'buy necklace', 'date movies 5', ),
-		8: ( 'buy designerbag', ),
-	},
-	"IRO": {
-		0: ( 'nothing', ),
-		1: ( 'nothing', ),
-		2: ( 'buy lotion 5', ),
-		3: ( 'buy fruitbasket 5', ),
-		4: ( 'buy drink 3', 'date stroll 6', ),
-		5: ( 'buy shoes 2', 'date beach 6', ),
-		6: ( 'buy puppy', 'date sightseeing 6', ),
-		7: ( 'buy necklace', 'date movies 6', ),
-		8: ( 'buy car', ),
-	},
-	"BONNIBEL": {
-		0: ( 'nothing', ),
-		1: ( 'nothing', ),
-		2: ( 'buy shell 10', 'job art' ),
-		3: ( 'buy donut 10', ),
-		4: ( 'buy chocolates 10', 'date stroll 7', ),
-		5: ( 'buy book 5', 'date beach 7', ),
-		6: ( 'buy cake 3', 'date sightseeing 7', ),
-		7: ( 'buy teaset 2', 'date movies 7', ),
-		8: ( 'nothing', ),
-	},
-	"AYANO": {
-		0: ( 'job slaying', ),
-		1: ( 'nothing', ),
-		2: ( 'nothing', ),
-		3: ( 'buy flowers 5', ),
-		4: ( 'buy plushytoy 1000', 'date stroll 20', ),
-		5: ( 'date beach 20', ),
-		6: ( 'buy designerbag 50', 'date sightseeing 20', ),
-		7: ( 'buy car 50', 'date movies 20', ),
-		8: ( 'nothing', ),
-	},
-	"FUMI": {
-		0: ( 'nothing', ),
-		1: ( 'nothing', ),
-		2: ( 'buy drink 25', ),
-		3: ( 'buy plushytoy 25', ),
-		4: ( 'buy shoes 10', 'date stroll 10', ),
-		5: ( 'buy necklace 10', 'date beach 10', ),
-		6: ( 'buy designerbag 5', 'date sightseeing 10', ),
-		7: ( 'buy car 2', 'date movies 10', ),
-		8: ( 'nothing', ),
-	},
-	"BEARVERLY": {
-		0: ( 'nothing', ),
-		1: ( 'nothing', ),
-		2: ( 'buy chocolates 50', ),
-		3: ( 'buy cake 50', ),
-		4: ( 'buy teaset 25', 'date stroll 12', ),
-		5: ( 'buy puppy 25', 'date beach 12', ),
-		6: ( 'buy necklace 10', 'date sightseeing 12', ),
-		7: ( 'buy designerbag 10', 'date movies 12', 'sorry 10' ),
-		8: ( 'buy potion', 'sorry 50' ),
-	},
-	"NINA": {
-		0: ( 'nothing', ),
-		1: ( 'nothing', ),
-		2: ( 'buy car', ),
-		3: ( 'buy car 2', ),
-		4: ( 'buy car 3', 'date stroll 15', ),
-		5: ( 'buy car 4', 'date beach 15', ),
-		6: ( 'buy car 5', 'date sightseeing 15', ),
-		7: ( 'buy car 6', 'date movies 15', 'sorry 10' ),
-		8: ( 'buy car 7', ),
-	},
-	"ALPHA": {
-		0: ( 'job legal', ),
-		1: ( 'job love 2', ),
-		2: ( 'buy shell 5000', ),
-		3: ( 'buy rose 5000', ),
-		4: ( 'buy book 5000', 'date stroll 20', ),
-		5: ( 'buy flowers 5000', 'date beach 20', ),
-		6: ( 'buy shoes 500', 'date sightseeing 20', ),
-		7: ( 'buy designerbag 500', 'date movies 20', 'unjob legal', ),
-		8: ( 'buy usb', ),
-	},
-	"PAMU": {
-		0: ( 'job wizard', ),
-		1: ( 'nothing', ),
-		2: ( 'buy lotion 5000', ),
-		3: ( 'buy drink 5000', ),
-		4: ( 'buy lotion 10000', 'date stroll 50', ),
-		5: ( 'buy car 100', 'date beach 50', ),
-		6: ( 'buy lotion 10000', 'buy lotion 10000', 'buy lotion 10000', 'buy lotion 10000', 'buy lotion 10000', 'date sightseeing 50', 'sorry 15' ),
-		7: ( 'buy drink 10000', 'buy drink 10000', 'buy drink 10000', 'buy drink 10000', 'buy drink 10000', 'date movies 50', 'sorry 50' ),
-		8: ( 'nothing', ),
-	},
-	"LUNA": {
-		0: ( 'nothing', ),
-		1: ( 'nothing', ),
-		2: ( 'buy shoes 10000', ),
-		3: ( 'buy necklace 10000', ),
-		4: ( 'buy car 10000', 'date stroll 100', ),
-		5: ( 'buy magiccandles 10', 'date beach 100', ),
-		6: ( 'date sightseeing 100', 'buy enchantedscarf 5', ),
-		7: ( 'date movies 100', 'buy bewitchedjam 3', ),
-		8: ( 'nothing', ),
-	},
-	"EVA": {
-		0: ( 'nothing', ),
-		1: ( 'nothing', ),
-		2: ( 'sorry 5', ),
-		3: ( 'sorry 50', ),
-		4: ( 'date stroll 25', ),
-		5: ( 'date beach 50', ),
-		6: ( 'date sightseeing 75', ),
-		7: ( 'date movies 25', ),
-		8: ( 'sorry 50', ),
-	},
+import json
+with open('dates.json', 'r') as f:
+	dates = json.load(f)
+
+statlookup = {
+	'ADV': 0, 'NUI': 1, 'FRE': 2, 'ACQ': 3, 'FRI': 4,
+	'AWK': 5, 'CRU': 6, 'SWE': 7, 'GIR': 8, 'LOV': 9
 }
 
 def woo(s):
 	( girl, levelstr ) = s.split()
 	if levelstr in ( '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' ):
-		level = int(levelstr)
+		level = levelstr
 	else:
-		level = statlookup[levelstr.upper()[:3]]
+		level = str(statlookup[levelstr.upper()[:3]])
 	fulfill(girl, dates[girl][level])
-
-
-def generica(girl, d):
-	for _ in sorted(d.keys()):
-		tasklist = d[_]
-		fulfill(girl, tasklist)
 
 
 def execute(task):
@@ -675,19 +430,26 @@ autolist = (
 	"PAMU 0", "PAMU 1", "PAMU 2", "PAMU 3", "PAMU 4",
 	"MISC 2",
 	"EVA 0", "EVA 1", "EVA 2", "EVA 3",
-	"LUNA 0", "LUNA 1", "LUNA 2", "LUNA 3", "LUNA 4",
-	"PAMU 5", "PAMU 6", "PAMU 7",
+	"LUNA 0", "LUNA 1", "LUNA 2",
 	"BONNIBEL 8", "FUMI 8", "BEARVERLY 8", "NINA 8", "ALPHA 8",
 )
 
 manualonly = (
-	"LUNA 5", "PAMU 8",
+	"LUNA 3", "LUNA 4", "LUNA 5",
 	"EVA 4", "EVA 5", "EVA 6", "EVA 7",
 	"LUNA 6", "LUNA 7", "LUNA 8",
 	"AYANO 8", "EVA 8",
+	"PAMU 5", "PAMU 6", "PAMU 7", "PAMU 8",
 )
 
-def main():
+def manual():
+	while True:
+		r = input("> ").strip().upper()
+		if r == 'QUIT':
+			break
+		woo(r)
+
+def automate():
 	pyautogui.FAILSAFE = True
 	reset()
 	start = time.time()
@@ -700,5 +462,11 @@ def main():
 		elapsed = time.time() - start
 		pyautogui.click(400, 600)
 		print('Completed in {} seconds'.format(elapsed))
+
+def main():
+	r = input("Autorun as far as possible (Y/n)? ").strip().lower()
+	if r != 'n':
+		automate()
+	manual()
 
 main()

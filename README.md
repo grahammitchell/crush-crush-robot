@@ -9,10 +9,21 @@ In particular, the offset of the upper-left corner of the *Crush Crush* game
 window is hard-coded in the variable `ul`. It's probably in a different place
 on your machine.
 
-Starts by **resetting your game**, then fulfills the requirements for Cassie up
-to "Friendzoned" and Mio up to "Acquaintance".
-
 Assumes you have a high enough multiplier already that "Sorry" and dates are
 instantaneous, and that you already have enough timeblocks open to work all
 jobs and all hobbies at once.
+
+Starts by **resetting your game**, then starts fulfulling the requirements for
+girls in order. Hit CTRL-C if it's out of control.
+
+Basically gets Alpha to lover status (if it can), then switches to manual mode.
+
+Once in manual mode, type the girl's name and the current status to run the
+next steps like so:
+
+```
+> pamu crush
+```
+
+Type `quit` when you're done.
 
