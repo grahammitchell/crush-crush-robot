@@ -164,6 +164,21 @@ def qty2clicks(wanted):
 			return i
 	return 0
 
+def findLogo():
+	print("Finding upper-left corner of game window... ", end='', flush=True)
+	logo = pyautogui.locateOnScreen('logoToFind.png')
+	if logo:
+		global ul
+		print("logo found at {}".format(logo[:2]))
+		x = logo[0] - 878
+		y = logo[1] - 86
+		ul = (x, y)
+		pyautogui.moveTo(x, y)
+		print("\tGame window is at {}".format(ul))
+	else:
+		die("not found.")
+
+
 def buy(gift, qty=1):
 	ensure("GIRLS")
 	activate("GIRLS/gift")
@@ -337,6 +352,7 @@ def automate():
 
 
 def main():
+	findLogo()
 	r = input("Autorun as far as possible (Y/n)? ").strip().lower()
 	if r != 'n':
 		automate()
