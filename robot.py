@@ -2,7 +2,7 @@
 
 # 2017-06-22 - initial version
 
-import pyautogui, time
+import pyautogui, time, json
 
 ul = ( 1213, 210 )
 
@@ -12,113 +12,20 @@ activegirl = 'none'
 jobscroll = 'UP'
 girlscroll = 0
 
-places = {
-	"GIRLS": (78, 530),
-	"JOBS": (215, 530),
-	"HOBBIES": (336, 530),
-	"STATS": (460, 530),
-	"STATS/RESET": (875, 351),
-	"RESET/okay": (412, 434),
+with open('places.json', 'r') as f:
+	places = json.load(f)
 
-	"GIRLS/CASSIE": (100, 206),
-	"GIRLS/MIO":    (100, 303),
-	"GIRLS/QUILL":  (100, 400),
-	"GIRLS/MISC": (100, 206),
-	"GIRLS/SCROLL": (100, 303),
-	"GIRLS/ELLE":  (100, 249),
-	"GIRLS/NUTAKU":  (100, 348),
-	"GIRLS/IRO":  (100, 195),
-	"GIRLS/BONNIBEL":  (100, 300),
-	"GIRLS/AYANO":  (100, 386),
-	"GIRLS/FUMI":  (100, 242),
-	"GIRLS/BEARVERLY":  (100, 343),
-	"GIRLS/NINA":  (100, 441),
-	"GIRLS/ALPHA": (100, 210),
-	"GIRLS/PAMU":  (100, 313),
-	"GIRLS/LUNA":  (100, 410),
-	"GIRLS/EVA": (100, 183),
-	"GIRLS/KARMA": (100, 272),
-	"GIRLS/SUTRA": (100, 361),
+with open('dates.json', 'r') as f:
+	dates = json.load(f)
 
-	"JOBS/fastfood":   (328, 210),
-	"JOBS/restaurant": (328, 274),
-	"JOBS/lifeguard":  (328, 344),
-	"JOBS/cleaning":   (328, 406),
-	"JOBS/computers":  (672, 210),
-	"JOBS/zoo":        (672, 274),
-	"JOBS/hunting":    (672, 344),
-	"JOBS/casino":     (672, 406),
-	"JOBS/SCROLL": (570, 292),
-	"JOBS/art":     (328, 253),
-	"JOBS/movies":  (328, 322),
-	"JOBS/slaying": (328, 391),
-	"JOBS/wizard":  (328, 459),
-	"JOBS/sports":  (672, 253),
-	"JOBS/legal":   (672, 322),
-	"JOBS/space":   (672, 391),
-	"JOBS/love":    (672, 459),
-
-	"GIRLS/dismiss": (893, 459),
-	"GIRLS/flirt": (578, 175),
-	"GIRLS/gift":  (578, 256),
-	"GIRLS/date":  (578, 296),
-
-	"HOBBIES/suave":     (350, 218),
-	"HOBBIES/funny":     (350, 288),
-	"HOBBIES/buff":      (350, 365),
-	"HOBBIES/techsavvy": (350, 438),
-	"HOBBIES/tenderness": (585, 218),
-	"HOBBIES/motivation": (585, 288),
-	"HOBBIES/wisdom":     (585, 365),
-	"HOBBIES/badass":     (585, 438),
-	"HOBBIES/smart":      (816, 218),
-	"HOBBIES/angst":      (816, 288),
-	"HOBBIES/mysterious": (816, 365),
-	"HOBBIES/lucky":      (816, 438),
-
-	"GIFT/PAY":       (700, 311),
-	"GIFT/INCREMENT": (636, 354),
-	"GIFT/NEXTPAGE":  (478, 177),
-	"GIFT/shell":       (315, 232),
-	"GIFT/lotion":  (315, 303),
-	"GIFT/fruitbasket": (315, 371),
-	"GIFT/book":        (315, 434),
-	"GIFT/rose":        (467, 232),
-	"GIFT/donut":       (467, 303),
-	"GIFT/chocolates":  (467, 371),
-	"GIFT/earrings":    (467, 434),
-	"GIFT/drink":       (315, 232),
-	"GIFT/cake":      (315, 303),
-	"GIFT/teaset":    (315, 371),
-	"GIFT/puppy":     (315, 434),
-	"GIFT/flowers":   (467, 232),
-	"GIFT/plushytoy": (467, 303),
-	"GIFT/shoes":     (467, 371),
-	"GIFT/necklace":  (467, 434),
-	"GIFT/cake":      (315, 303),
-	"GIFT/designerbag": (315, 232),
-	"GIFT/car":         (467, 232),
-	"GIFT/potion": (315, 371),
-	"GIFT/usb":    (315, 371),
-	"GIFT/magiccandles":   (315, 303),
-	"GIFT/enchantedscarf": (467, 303),
-	"GIFT/bewitchedjam":   (315, 371),
-	"GIFT/mysticslippers": (467, 371),
-
-	"DATE/PAY":      (700, 311),
-	"DATE/GOAGAIN":  (347, 441),
-	"DATE/COMPLETE": (692, 441),
-	"DATE/stroll":      (370, 247),
-	"DATE/movies":      (370, 310),
-	"DATE/sightseeing": (370, 372),
-	"DATE/beach":       (370, 437),
-}
+with open('order.json', 'r') as f:
+	autolist = json.load(f)
 
 maintabs = ( "GIRLS", "JOBS", "HOBBIES", "STATS" )
 
 giftpages = {
 	"shell":       0,
-	"lotion":  0,
+	"lotion":      0,
 	"fruitbasket": 0,
 	"book":        0,
 	"rose":        0,
@@ -356,9 +263,6 @@ def reset():
 	time.sleep(6.5)
 	print("done.")
 
-import json
-with open('dates.json', 'r') as f:
-	dates = json.load(f)
 
 statlookup = {
 	'ADV': 0, 'NUI': 1, 'FRE': 2, 'ACQ': 3, 'FRI': 4,
@@ -407,40 +311,6 @@ def fulfill(girl, steps):
 		status = statuslevels[level]
 		log("You're now {} ({}) with {}!".format(status, level, girl.capitalize()))
 
-autolist = (
-	"CASSIE 0", "CASSIE 1", "CASSIE 2", "CASSIE 3",
-	"CASSIE 4", "CASSIE 5", "CASSIE 6", "CASSIE 7", "CASSIE 8",
-	"MIO 0", "MIO 1", "MIO 2", "MIO 3",
-	"MIO 4", "MIO 5", "MIO 6", "MIO 7", "MIO 8",
-	"MISC 0",
-	"ELLE 0", "ELLE 1", "ELLE 2", "ELLE 3", "ELLE 4", "ELLE 5", "ELLE 6", "ELLE 7", "ELLE 8",
-	"NUTAKU 0", "NUTAKU 1", "NUTAKU 2", "NUTAKU 3", "NUTAKU 4", "NUTAKU 5",
-	"NUTAKU 6", "NUTAKU 7", "NUTAKU 8",
-	"MISC 1",
-	"QUILL 0", "QUILL 1", "QUILL 2", "QUILL 3", "QUILL 4", "QUILL 5", "QUILL 6", "QUILL 7", "QUILL 8",
-	"IRO 0", "IRO 1", "IRO 2", "IRO 3", "IRO 4", "IRO 5", "IRO 6", "IRO 7", "IRO 8",
-	"BONNIBEL 0", "BONNIBEL 1", "BONNIBEL 2", "BONNIBEL 3", "BONNIBEL 4",
-	"BONNIBEL 5", "BONNIBEL 6", "BONNIBEL 7",
-	"FUMI 0", "FUMI 1", "FUMI 2", "FUMI 3", "FUMI 4", "FUMI 5", "FUMI 6", "FUMI 7",
-	"AYANO 0", "AYANO 1", "AYANO 2", "AYANO 3", "AYANO 4", "AYANO 5", "AYANO 6", "AYANO 7",
-	"BEARVERLY 0", "BEARVERLY 1", "BEARVERLY 2", "BEARVERLY 3", "BEARVERLY 4",
-	"BEARVERLY 5", "BEARVERLY 6", "BEARVERLY 7",
-	"NINA 0", "NINA 1", "NINA 2", "NINA 3", "NINA 4", "NINA 5", "NINA 6", "NINA 7",
-	"ALPHA 0", "ALPHA 1", "ALPHA 2", "ALPHA 3", "ALPHA 4", "ALPHA 5", "ALPHA 6", "ALPHA 7",
-	"PAMU 0", "PAMU 1", "PAMU 2", "PAMU 3", "PAMU 4",
-	"MISC 2",
-	"EVA 0", "EVA 1", "EVA 2", "EVA 3",
-	"LUNA 0", "LUNA 1", "LUNA 2",
-	"BONNIBEL 8", "FUMI 8", "BEARVERLY 8", "NINA 8", "ALPHA 8",
-)
-
-manualonly = (
-	"LUNA 3", "LUNA 4", "LUNA 5",
-	"EVA 4", "EVA 5", "EVA 6", "EVA 7",
-	"LUNA 6", "LUNA 7", "LUNA 8",
-	"AYANO 8", "EVA 8",
-	"PAMU 5", "PAMU 6", "PAMU 7", "PAMU 8",
-)
 
 def manual():
 	while True:
@@ -448,20 +318,23 @@ def manual():
 		if r == 'QUIT':
 			break
 		woo(r)
+		pyautogui.click(400, 600)
+
 
 def automate():
 	pyautogui.FAILSAFE = True
 	reset()
 	start = time.time()
-	try:
-		for _ in autolist:
-			woo(_)
-			pyautogui.click(400, 600)
-			time.sleep(0.5)
-	except KeyboardInterrupt:
-		elapsed = time.time() - start
+	for _ in autolist:
+		if _ == "STOP":
+			break
+		woo(_)
 		pyautogui.click(400, 600)
-		print('Completed in {} seconds'.format(elapsed))
+		time.sleep(0.5)
+	elapsed = time.time() - start
+	pyautogui.click(400, 600)
+	print('Completed in {} seconds'.format(elapsed))
+
 
 def main():
 	r = input("Autorun as far as possible (Y/n)? ").strip().lower()
