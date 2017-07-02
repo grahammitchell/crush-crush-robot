@@ -25,5 +25,12 @@ next steps like so:
 > pamu crush
 ```
 
+You can then automatically run the next level for the same girl by just typing
+`next` or `n`. Girl names and relationship levels can be abbreviated:
+
+```
+> bear awk
+```
+
 Type `quit` when you're done.
 
