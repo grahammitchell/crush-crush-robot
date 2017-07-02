@@ -2,7 +2,8 @@
 
 # 2017-06-22 - initial version
 
-import pyautogui, time, json
+import pyautogui
+import time, json, readline
 
 ul = ( 1213, 210 )
 
@@ -284,12 +285,25 @@ statlookup = {
 	'AWK': 5, 'CRU': 6, 'SWE': 7, 'GIR': 8, 'LOV': 9
 }
 
+def showlevel(girl):
+	global girllevel, statuslevels
+	level = girllevel[girl]
+	status = statuslevels[level]
+	log("You're now {} ({}) with {}!".format(status, level, girl.capitalize()))
+
+
 def woo(s):
 	( girl, levelstr ) = s.split()
 	if levelstr in ( '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' ):
 		level = levelstr
 	else:
 		level = str(statlookup[levelstr.upper()[:3]])
+	if girl not in girllevel:
+		for g in girllevel.keys():
+			if g.startswith(girl):
+				girl = g
+				break
+	girllevel[girl] = int(level)
 	fulfill(girl, dates[girl][level])
 
 
@@ -320,11 +334,9 @@ def fulfill(girl, steps):
 		execute(task)
 	ensure("GIRLS")
 	dialogskip()
+	girllevel[girl] += 1
 	if girl != 'MISC':
-		girllevel[girl] += 1
-		level = girllevel[girl]
-		status = statuslevels[level]
-		log("You're now {} ({}) with {}!".format(status, level, girl.capitalize()))
+		showlevel(girl)
 
 
 def manual():
@@ -332,8 +344,11 @@ def manual():
 		r = input("> ").strip().upper()
 		if r == 'QUIT':
 			break
+		if r == 'N' or r == 'NEXT':
+			level = girllevel[activegirl]
+			r = '{} {}'.format(activegirl, level)
 		woo(r)
-		pyautogui.click(400, 600)
+		pyautogui.hotkey('alt', 'tab')
 
 
 def automate():
@@ -344,10 +359,12 @@ def automate():
 		if _ == "STOP":
 			break
 		woo(_)
-		pyautogui.click(400, 600)
-		time.sleep(0.5)
+		pyautogui.hotkey('alt', 'tab')
+		print("Pausing between dates... ", end='', flush=True)
+		time.sleep(1.5)
+		print("resuming.")
+	pyautogui.hotkey('alt', 'tab')
 	elapsed = time.time() - start
-	pyautogui.click(400, 600)
 	print('Completed in {} seconds'.format(elapsed))
 
 
