@@ -356,7 +356,8 @@
       "sorry 20"
     ],
     "5": [
-      "date beach 50"
+      "date beach 50",
+      "sorry 100"
     ],
     "6": [
       "date sightseeing 75"
@@ -408,7 +409,7 @@
       "sorry 50"
     ],
     "8": [
-      "nothing"
+      "sorry 100"
     ]
   },
   "LUNA": {
@@ -556,7 +557,8 @@
       "unjob love"
     ],
     "8": [
-      "buy usb"
+      "buy usb",
+      "sorry 30"
     ]
   }
 }
