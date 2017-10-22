@@ -12,6 +12,7 @@ activetab = 'GIRLS'
 activegirl = 'none'
 jobscroll = 'UP'
 girlscroll = 0
+noscroll = False
 
 with open('places.json', 'r') as f:
 	places = json.load(f)
@@ -125,19 +126,20 @@ def activate(place):
 
 def selectgirl(girl):
 	ensure("GIRLS")
-	global activegirl
+	global activegirl, noscroll
 	if girl == activegirl:
 		return
-	if activegirl == 'none':
+	if noscroll == False and activegirl == 'none':
 		log("Scrolling up girl list just to be safe.")
 		travel("GIRLS/SCROLL")
 		pyautogui.scroll(30)
 		time.sleep(1)
 	lvl = girlpages[girl]
-	scrollgirls(lvl)
-	activate("GIRLS/"+girl)
+	if noscroll == False:
+		scrollgirls(lvl)
+		activate("GIRLS/"+girl)
+		time.sleep(0.6)
 	activegirl = girl
-	time.sleep(0.6)
 
 def scrollgirls(level):
 	global girlscroll
@@ -151,8 +153,9 @@ def scrollgirls(level):
 	time.sleep(0.5)
 
 def repeatclick(n):
-	for _ in range(n):
-		pyautogui.click()
+	# for _ in range(n):
+	#	pyautogui.click()
+	pyautogui.click(clicks=n, interval=0.025)
 
 def ensure(place):
 	global activetab
@@ -340,9 +343,11 @@ def fulfill(girl, steps):
 
 
 def manual():
+	global noscroll
+	noscroll = True
 	while True:
 		r = input("> ").strip().upper()
-		if r == 'QUIT':
+		if r == 'Q' or r == 'QUIT':
 			break
 		if r == 'N' or r == 'NEXT':
 			level = girllevel[activegirl]
@@ -361,7 +366,7 @@ def automate():
 		woo(_)
 		pyautogui.hotkey('alt', 'tab')
 		print("Pausing between dates... ", end='', flush=True)
-		time.sleep(1.5)
+		time.sleep(1.0)
 		print("resuming.")
 	pyautogui.hotkey('alt', 'tab')
 	elapsed = time.time() - start
